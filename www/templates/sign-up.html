@@ -1,0 +1,33 @@
+<ion-view title="Registrarse">
+	<ion-content class="ty-login">
+		<div class="ty-login_fields">
+			<label class="ty-login_label">
+        <input class="ty-login_field" type="text" placeholder="Nombre" ng-model="user.name" required>
+      </label>
+      <label class="ty-login_label">
+        <input class="ty-login_field" type="text" placeholder="Estado" ng-model="user.estado" required>
+      </label>
+      <label class="ty-login_label">
+        <input class="ty-login_field" type="tel" placeholder="Celular" ng-model="user.celular" required>
+      </label>
+      <label class="ty-login_label">
+        <select class="ty-login_select"  required>
+          <option value="">Cancha de preferencia</option>
+        </select>
+      </label>
+		  <label class="ty-login_label">
+		    <input type="text" placeholder="Email" class="ty-login_field">
+		  </label>
+		  <label class="ty-login_label">
+		    <input type="password" placeholder="Contraseña" class="ty-login_field">
+		  </label>
+			<label class="" ng-click="loadPhoto()">
+				<img ng-src="{{user.photo?user.photo:'css/thumb_profile.jpg'}}" class="ty-login_avatar">
+      </label>
+		</div>
+		
+    <a class="button button-full btn-register" href="#/sign-up">
+      Registrar
+    </a>
+	</ion-content>
+</ion-view>

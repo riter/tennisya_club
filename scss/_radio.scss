@@ -1,0 +1,29 @@
+.ty-radio{
+	color: #686a68;
+	font-size: 15px;
+	display: block;
+	// margin: 0 0 10px;
+	margin: 0;
+	// padding: 0px 30px 0px 26px;
+	padding: 8px 30px 8px 26px;
+	// margin-left: 20px;
+	position: relative;
+	.ic-radio{
+		// content: "";
+		background:transparent url('icons.png') right top no-repeat;
+		background-size: 320px auto;
+		display: block;
+		height: 17px;
+		width: 16px;
+		left: 0;
+		@include center(v);
+	}
+	input[type="radio"],
+	input[type="checkbox"]{
+		// margin-right: 10px;
+		display: none;
+		&:checked ~ .ic-radio{
+			background-position: right -18px;
+		}
+	}
+}

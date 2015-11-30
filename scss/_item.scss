@@ -1,0 +1,32 @@
+// Item Divider
+// -------------------------------
+.item{
+	h2{
+		line-height: 1.2;
+	}
+	p{
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+}
+.item-input{
+	padding: 6px 0 5px 10px;
+}
+.item-divider {
+	font-size: 16px;
+	min-height: 22px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+//16px 49px 9px 16px
+
+
+/**
+ * Complex Items
+ * --------------------------------------------------
+ */
+
+.item-complex .item-content,
+.item-radio .item-content {
+  padding-bottom: ($item-padding - 7) ;
+}

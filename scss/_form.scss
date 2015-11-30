@@ -1,0 +1,43 @@
+.input-label{
+	padding: 3px 10px 2px 0px;
+}
+
+input[type=time]::-webkit-inner-spin-button,
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.item-input {
+  input {
+    @include flex(1, 167px);
+    text-align: right;
+		padding-right: 16px;
+  }
+}
+
+// Form Controls
+// -------------------------------
+
+// Shared size and type resets
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+	height: 27px;
+}

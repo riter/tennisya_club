@@ -1,0 +1,52 @@
+@mixin font($fontWeight, $size, $color:#fff){
+	@each $fontKey, $font in $fonts{
+		@if $fontKey == $fontWeight {
+			font-family: $font;
+		}
+	}
+	color: $color;
+	@if $size != false{
+		font-size: $size;
+	}
+}
+@mixin center($type){
+	position: absolute;
+	@if $type == v {
+		top: 50%;
+		// transform: translateY(-50%);
+		@include transform(translateY(-50%));
+	} @else if $type == h {
+		left: 50%;
+		// transform: translateX(-50%);
+		@include transform(translateX(-50%));
+	} @else if $type == f {
+		left: 50%;
+		top: 50%;
+		// transform: translate(-50%, -50%);
+		@include transform(translate(-50%, -50%));
+	}
+}
+
+@mixin placeholder($color : $clr-mixin-placeholder) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&:-moz-placeholder {
+		color: $color;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+
+@mixin getSprite(){
+	background-image: url('../img/icons.png');
+  background-repeat: no-repeat;
+  background-size: 320px;
+}
+@mixin clearSelect(){
+	appearance : none;
+	border:0;
+	background-color: transparent;
+}

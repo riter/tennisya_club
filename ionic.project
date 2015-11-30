@@ -1,0 +1,12 @@
+{
+  "name": "tenisyaclub",
+  "app_id": "65b00692",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

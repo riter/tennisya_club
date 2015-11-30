@@ -1,0 +1,215 @@
+<ion-view view-title="Partidos">
+	<ion-nav-buttons side="right">
+		<button class="button button-icon ion-android-search ty-btn-search" ng-click="onSearch()">
+		</button>
+	</ion-nav-buttons>
+	<ion-tabs class="tabs-striped tabs-top tabs-stable ty-tabs-top">
+		<ion-tab title="Confirmar Cancha">
+			<ion-nav-view name="confirm-court">
+				<div class="ty-tab-option">
+					<select name="" id="ty-orderby-1" class="ty-orderby-select">
+						<option value="1">Abiertos</option>
+						<option value="2">Esperando cancha</option>
+						<option value="3">Esperando confirmación</option>
+						<option value="4">Esperando respuesta</option>
+					</select>
+					<label for="ty-orderby-1" class="ty-orderby-label">
+						Mostrar
+					</label>
+				</div>
+				<ion-content class="ty-has-tabs-options">
+					<ion-list class="ty-list-matches">
+						<ion-item>
+							<div class="ty-match">
+								<div class="ty-match_detail">
+										<span class="ty-match_date">Martes 23/3, 18 hs</span>
+										<span class="ty-match_place">Lawn Tennis</span>
+								</div>
+								<div class="ty-match_players">
+									<ul class="ty-match-players">
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/1.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/2.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/4.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/void.png" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<!-- <li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><i class="match-players_icon ic-plus"></i></a></li> -->
+									</ul>
+								</div>
+							</div>
+							<div class="ty-match-buttons">
+								<button class="button ty-button-match confirm" ng-click="confirmarPartido()">Confirmar</button>
+								<button class="button ty-button-match cancel" ng-click="modalConfirm.hide()">No disponible</button>
+							</div>
+						</ion-item>
+						<ion-item>
+							<div class="ty-match">
+								<div class="ty-match_detail">
+										<span class="ty-match_date">Miércoles 23/3, 18 hs</span>
+										<span class="ty-match_place">Lawn Tennis</span>
+								</div>
+								<div class="ty-match_players">
+									<ul class="ty-match-players">
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/1.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/2.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/void.png" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/void.png" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<!-- <li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><i class="match-players_icon ic-plus"></i></a></li> -->
+									</ul>
+								</div>
+							</div>
+							<div class="ty-match-buttons">
+								<button class="button ty-button-match confirm" ng-click="confirmarPartido()">Confirmar</button>
+								<button class="button ty-button-match cancel" ng-click="modalConfirm.hide()">No disponible</button>
+							</div>
+						</ion-item>
+						<ion-item>
+							<div class="ty-match">
+								<div class="ty-match_detail">
+										<span class="ty-match_date">Martes 23/3, 18 hs</span>
+										<span class="ty-match_place">Lawn Tennis</span>
+								</div>
+								<div class="ty-match_players">
+									<ul class="ty-match-players">
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/1.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/2.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/3.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/void.png" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<!-- <li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><i class="match-players_icon ic-plus"></i></a></li> -->
+									</ul>
+								</div>
+							</div>
+							<div class="ty-match-buttons">
+								<button class="button ty-button-match confirm" ng-click="confirmarPartido()">Confirmar</button>
+								<button class="button ty-button-match cancel" ng-click="modalConfirm.hide()">No disponible</button>
+							</div>
+						</ion-item>
+					</ion-list>
+				</ion-content>
+			</ion-nav-view>
+		</ion-tab>
+		<ion-tab title="Lista de Partidos">
+			<ion-nav-view name="list-matches">
+				<div class="ty-tab-option">
+					<select name="" id="ty-orderby-2" class="ty-orderby-select">
+						<option value="1">Todos</option>
+						<option value="2">Esperando cancha</option>
+						<option value="3">Esperando confirmación</option>
+						<option value="4">Esperando respuesta</option>
+					</select>
+					<label for="ty-orderby-2" class="ty-orderby-label">
+						Mostrar
+					</label>
+				</div>
+				<ion-content class="ty-has-tabs-options">
+					<ion-list class="ty-list-matches">
+						<div class="item-divider">
+							Abiertos
+						</div>
+
+						<ion-item>
+							<div class="ty-match">
+								<div class="ty-match_detail">
+										<span class="ty-match_date">Martes 23/3, 18 hs</span>
+										<span class="ty-match_place">Lawn Tennis</span>
+								</div>
+								<div class="ty-match_players">
+									<ul class="ty-match-players">
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/1.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/2.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/4.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/void.png" widht="36" height="36" class="ty-match-players_img"></a></li>
+									</ul>
+								</div>
+							</div>
+						</ion-item>
+						<ion-item>
+							<div class="ty-match">
+								<div class="ty-match_detail">
+										<span class="ty-match_date">Martes 23/3, 18 hs</span>
+										<span class="ty-match_place">Lawn Tennis</span>
+								</div>
+								<div class="ty-match_players">
+									<ul class="ty-match-players">
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/1.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/2.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/user.png" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/void.png" widht="36" height="36" class="ty-match-players_img"></a></li>
+									</ul>
+								</div>
+							</div>
+						</ion-item>
+						<ion-item>
+							<div class="ty-match">
+								<div class="ty-match_detail">
+										<span class="ty-match_date">Martes 23/3, 18 hs</span>
+										<span class="ty-match_place">Lawn Tennis</span>
+								</div>
+								<div class="ty-match_players">
+									<ul class="ty-match-players">
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/1.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/user.png" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/void.png" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/void.png" widht="36" height="36" class="ty-match-players_img"></a></li>
+									</ul>
+								</div>
+							</div>
+						</ion-item>
+						<ion-item>
+							<div class="ty-match">
+								<div class="ty-match_detail">
+										<span class="ty-match_date">Martes 23/3, 18 hs</span>
+										<span class="ty-match_place">Lawn Tennis</span>
+								</div>
+								<div class="ty-match_players">
+									<ul class="ty-match-players">
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/1.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/2.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/4.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/void.png" widht="36" height="36" class="ty-match-players_img"></a></li>
+									</ul>
+								</div>
+							</div>
+						</ion-item>
+						
+						<div class="item-divider">
+							Cerrados
+						</div>
+
+						<ion-item>
+							<div class="ty-match">
+								<div class="ty-match_detail">
+										<span class="ty-match_date">Martes 23/3, 18 hs</span>
+										<span class="ty-match_place">Lawn Tennis</span>
+								</div>
+								<div class="ty-match_players">
+									<ul class="ty-match-players">
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/1.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/2.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/4.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/3.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+									</ul>
+								</div>
+							</div>
+						</ion-item>
+						<ion-item>
+							<div class="ty-match">
+								<div class="ty-match_detail">
+										<span class="ty-match_date">Martes 23/3, 18 hs</span>
+										<span class="ty-match_place">Lawn Tennis</span>
+								</div>
+								<div class="ty-match_players">
+									<ul class="ty-match-players">
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/1.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/2.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/4.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+										<li class="ty-match-players_item"><a href="#" class="ty-match-players_link"><img src="img/gamers/3.jpg" widht="36" height="36" class="ty-match-players_img"></a></li>
+									</ul>
+								</div>
+							</div>
+						</ion-item>
+					</ion-list>
+				</ion-content>
+			</ion-nav-view>
+		</ion-tab>
+	</ion-tabs>
+</ion-view>
+
